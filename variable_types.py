@@ -6,7 +6,6 @@ if 'var1' in locals():
     print('cannot delete var1')
 else:
     print('var1 is deleted')
-
 '''
 1
 var1 is deleted
