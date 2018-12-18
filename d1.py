@@ -15,3 +15,16 @@ print(c)
 rs = True if c == 2 else False
 
 print(rs)
+
+# test get type variable
+print(type(1))
+print(type(""))
+print(type(2.2))
+
+# parse kieu du lieu
+a = "2"
+print(type(int(a)))
+b = "2.2"
+print(type(float(b)))
+c = 222
+print(type(str(c)))
