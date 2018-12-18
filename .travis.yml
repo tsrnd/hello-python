@@ -1,0 +1,7 @@
+language: python
+python:
+  - "3.7.1"
+install:
+  - [[ -f ./requirements.txt ]] && pip install -r requirements.txt || true
+script:
+  - ls | grep '.py' | xargs python -u
