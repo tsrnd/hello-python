@@ -13,3 +13,18 @@ print(d)
 
 e = round(b)
 print(e)
+
+if 5 < 3**4 <= 116:
+    print("hello")
+else:
+    print("not hello")
+
+a = True
+b = False
+
+print(a == (not b))
+
+print(a == (not b))
+
+# isinstance used check type
+isinstance(12, int)

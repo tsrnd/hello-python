@@ -12,3 +12,47 @@ print("list1[0] after change: ", list1[0])
 #del list
 del list1[0]
 print(list1)
+
+print(max(list2))
+print(min(list2))
+
+# converts to list
+aTuple = (123, 'C++', 'Java', 'Python')
+list1 = list(aTuple)
+print ("List elements : ", list1)
+
+str = "Hello World"
+
+list2 = list(str)
+print ("List elements : ", list2)
+
+# append
+list2.append("!!!!")
+print(list2)
+
+# count
+print(list2.count("o"))
+
+# extend
+list2.extend(list3)
+print(list2)
+
+# index: return index of obj
+print(list1.index(123))
+
+# insert the given element at the given index
+list1.insert(1, 'abc')
+print(list1)
+
+# pop() remove laster obj from the list or which index given
+list1.pop()
+list1.pop(1)
+print(list1)
+
+# remove() remove object which is given
+list1.remove('Java')
+print(list1)
+
+# reverse()
+list1.reverse()
+print(list1)
