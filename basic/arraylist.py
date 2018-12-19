@@ -59,10 +59,11 @@ thisset.update(["orange", "mango", "grapes"])
 thisset.update(["orange", "mango"])
 print('Sets after inserted: ', thisset)
 
-# Remove item
-thisset.discard("banana")
 # If the item to remove does not exist, it will raise an error
 thisset.remove("banana")
+# Remove item
+thisset.discard("banana")
+
 # Remove last item
 thisset.pop()
 # remove all items
@@ -90,9 +91,14 @@ for x, y in thisdict.items():
 for val in thisdict.values():
     print(val)
 
+#Copy data.
+newDic = thisdict.copy()
+
 # The pop() method removes the item with the specified key name:
 thisdict.pop("model")
 # Remove the last insert item
 thisdict.popitem()
 # Delete item with key
-del thisdict["year"]
+del thisdict["brand"]
+
+print(newDic)
