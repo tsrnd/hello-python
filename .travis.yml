@@ -7,4 +7,4 @@ install:
       pip install -r ./requirements.txt;
     fi
 script:
-  - ls | grep '.py' | xargs python -u
+  - find . -type f -name "*.py" | xargs python -u
