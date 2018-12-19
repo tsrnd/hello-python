@@ -21,3 +21,14 @@ num is in seq2
 '''
 
 # Identity Operators
+a = "hello"
+b = "hello"
+c = "python"
+if a is b:
+  print("a<%s> is b<%s>" % (id(a), id(b)))
+else:
+  print("a<%s> is not b<%s>" % (id(a), id(b)))
+if c is b:
+  print("c<%s> is b<%s>" % (id(c), id(b)))
+else:
+  print("c<%s> is not b<%s>" % (id(c), id(b)))
