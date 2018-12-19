@@ -1,5 +1,5 @@
-num = int(input("give me a number to check: "))
-check = int(input("give me a number to divide by: "))
+num = 20
+check = 5
 
 if num % 4 == 0:
     print(num, "is a multiple of 4")
