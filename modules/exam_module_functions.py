@@ -27,7 +27,7 @@ def getCarInfoByName(carName):
     return carInfo
 
 
-def readAndDisplay(fileName):
+def readAndDisplay(fileName = 'test.txt'):
     f = open(fileName)
     line = f.readline()
     while line:
@@ -37,7 +37,7 @@ def readAndDisplay(fileName):
     return
 
 
-def writeFile(fileName):
+def writeFile(fileName = 'test.txt'):
     print('please input content: ')
     fileContent = []
     while True:
