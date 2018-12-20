@@ -56,3 +56,24 @@ print(list1)
 # reverse()
 list1.reverse()
 print(list1)
+
+# Multi-Dimensional List
+List = [['Hi', 'Hello'], ['Bye']]
+
+print(List[0][1])
+print(List[1][0])
+
+List = [1, 2, 'Geeks', 4, 'For', 6, 'Geeks'] 
+
+print(List[-1])
+print(List[-3])
+
+List = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+List.remove(5) 
+List.remove(6) 
+print(List)
+
+
+List.pop() # remove the last element
+print(List)
+
