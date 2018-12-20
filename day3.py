@@ -51,7 +51,27 @@ else:
     pos = lis.index(0)    
 finally:
     print(f"Position of 0 in list is: {pos}")
-
-
-
-
+"""
+print('#######################################################')
+# Image
+from PIL import Image
+fIm = Image.open("a.jpg")
+fImb = Image.open("b.jpg")
+fIm.save("new_a.jpg", "JPEG")
+fImb.save("new_a.jpg")
+fIm.thumbnail((100,100))
+"""
+print('#######################################################')
+# File JSON
+import urllib.request, json
+url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=16.0406376,108.2275175&key=AIzaSyCC4ozgNyQ29E9z-F8MwkkmxzJN6H558ys&types=country"
+resp = urllib.request.urlopen(url)
+# decode response to json sring follow format
+fjsonstr = resp.read().decode('utf-8')
+print(type(fjsonstr),"\n", fjsonstr,"\n")
+# convert json sring into data
+data = json.loads(fjsonstr)
+print(type(data),"\n", data,"\n")
+# convert data into json sring 
+jsonstr = json.dumps(data)
+print(type(jsonstr), "\n",jsonstr,"\n")
