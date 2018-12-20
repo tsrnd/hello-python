@@ -42,12 +42,43 @@ def isLucky(n):
 # print(isLucky(1230))
 
 def sortByHeight(a):
-    cay=[]
-    for index in range(len(a)) :
-        if a==-1:
-            cay.append(a(index))
-        elif index/2==0:
-            cay.append(a(index))
-    return cay
+    result = []
+    notTree = []
+    for element in a:
+        if element != -1:
+            notTree.append(element)
+    for element in a:
+        if element == -1:
+            result.append(element)
+        else:
+            result.append(min(notTree))
+            del notTree[notTree.index(min(notTree))]
+    return result
 
-print(sortByHeight([-1, 150, 190, 170, -1, -1, 160, 180]))
+
+def sortByHeight2(a):
+    result = []
+    notTree = [elem for elem in a if elem != -1]
+    notTree.sort()
+    notTree.reverse()
+    for element in a:
+        if element == -1:
+            result.append(element)
+        else:
+            result.append(notTree.pop())
+    return result
+
+# print(sortByHeight2([-1, 150, 190, 170, -1, -1, 160, 180]))
+
+
+def reverseParentheses(s):
+    count = s.count("(")
+    while(count > 0):
+        s = s.replace(s[s.rfind("("):s.find(")")+1],
+                      s[s.rfind("(")+1:s.find(")")][::-1])
+        count = count - 1
+    return s
+
+
+# print(reverseParentheses("abc(cba)ab(bac)c"))
+

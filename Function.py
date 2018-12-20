@@ -1,4 +1,4 @@
-print("Hello, this is calculator")
+print("Hello, this is Function")
 
 
 def plus(a, b):
