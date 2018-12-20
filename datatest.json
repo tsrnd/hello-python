@@ -1,0 +1,104 @@
+{
+    "keyword_suggestion_list": [
+        {
+            "keyword": "a",
+            "search_category": 1,
+            "doc_count": 106
+        },
+        {
+            "keyword": "abc",
+            "search_category": 1,
+            "doc_count": 45
+        },
+        {
+            "keyword": "aus",
+            "search_category": 2,
+            "doc_count": 41
+        },
+        {
+            "keyword": "abcd",
+            "search_category": 1,
+            "doc_count": 23
+        },
+        {
+            "keyword": "all",
+            "search_category": 1,
+            "doc_count": 22
+        },
+        {
+            "keyword": "a",
+            "search_category": 2,
+            "doc_count": 12
+        },
+        {
+            "keyword": "and",
+            "search_category": 1,
+            "doc_count": 11
+        },
+        {
+            "keyword": "aaaaaa",
+            "search_category": 3,
+            "doc_count": 10
+        },
+        {
+            "keyword": "an",
+            "search_category": 1,
+            "doc_count": 10
+        },
+        {
+            "keyword": "ab",
+            "search_category": 1,
+            "doc_count": 10
+        },
+        {
+            "keyword": "abcde",
+            "search_category": 1,
+            "doc_count": 8
+        },
+        {
+            "keyword": "anh",
+            "search_category": 3,
+            "doc_count": 8
+        },
+        {
+            "keyword": "ahihi",
+            "search_category": 1,
+            "doc_count": 8
+        },
+        {
+            "keyword": "aa",
+            "search_category": 1,
+            "doc_count": 8
+        },
+        {
+            "keyword": "at",
+            "search_category": 1,
+            "doc_count": 8
+        },
+        {
+            "keyword": "as",
+            "search_category": 1,
+            "doc_count": 7
+        },
+        {
+            "keyword": "ah",
+            "search_category": 1,
+            "doc_count": 7
+        },
+        {
+            "keyword": "ag",
+            "search_category": 1,
+            "doc_count": 7
+        },
+        {
+            "keyword": "asd",
+            "search_category": 3,
+            "doc_count": 7
+        },
+        {
+            "keyword": "achu",
+            "search_category": 3,
+            "doc_count": 6
+        }
+    ]
+}

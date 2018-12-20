@@ -43,3 +43,7 @@ aters.remove("sep")
 print(aters)
 aters.discard("sep")
 print(aters)
+
+test = iter(tup2)
+print(next(test))
+print(next(test))
