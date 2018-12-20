@@ -1,0 +1,17 @@
+import time
+import calendar
+localtime = time.localtime(time.time())
+print("time ", localtime)
+localtimes = time.asctime(time.localtime(time.time()))
+print("asctime: ", localtimes)
+cal = calendar.month(2016, 11)
+print("Here is the calendar:")
+print(cal)
+t = (2015, 12, 31, 10, 39, 45, 1, 48, 0)
+t = time.mktime(t)
+print(time.strftime("%b %d %Y %H:%M:%S", time.localtime(t)))
+print(calendar.isleap(2000))
+print(calendar.firstweekday())
+print(calendar.leapdays(2000, 2010))
+print(calendar.prmonth(2000, 11))
+print(calendar.monthcalendar(2018, 12))
