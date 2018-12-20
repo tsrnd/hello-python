@@ -29,5 +29,11 @@ print(info2)
 info2 = dict.fromkeys(keys, "null")
 print(info2)
 
+#Lấy keys và valus của dic
+keys = info.keys()
+values = info.values()
+
+print(keys)
+print(values)
 
 
