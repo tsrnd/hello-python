@@ -28,6 +28,3 @@ def exponentiation():
 # Floor division	
 def floorDivision():
     return a // b
-
-
-

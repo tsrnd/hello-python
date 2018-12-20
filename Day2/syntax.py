@@ -38,8 +38,3 @@ def lengthString(str):
     return len(str)
 
 print(lengthString("123455"))
-
-
-
-
-
