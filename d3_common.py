@@ -1,7 +1,7 @@
 # print info
 def print_info(name, age):
-    print('Name:', name)
-    print('Age:', age)
+    print("Name:", name)
+    print("Age:", age)
     return
 
 
@@ -13,3 +13,9 @@ def factorial(n):
     for i in range(1, n + 1):
         f *= i
     return f
+
+
+def devide(x, y):
+    if y == 0:
+        raise ValueError("Can not devide by zero!")
+    return x / y
