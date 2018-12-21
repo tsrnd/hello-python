@@ -32,3 +32,7 @@ if c is b:
   print("c<%s> is b<%s>" % (id(c), id(b)))
 else:
   print("c<%s> is not b<%s>" % (id(c), id(b)))
+'''
+a<4452011904> is b<4452011904>
+c<4452131424> is not b<4452011904>
+'''
