@@ -24,6 +24,8 @@ print(int(c))
 # list
 ls1 = ["a", "b", 2, "d"]
 ls2 = [1, 2, 3]
+ls3 = [1, 1, 1, 2, 4, 3]
+print(a)
 print(ls1 + ls2)
 del ls2[2]
 print(ls2)
@@ -32,10 +34,17 @@ print(ls1[:1])
 print(ls1[1:3])
 ls1.append(["add", "add2"])
 print(ls1)
+# output ['a', 'b', 2, 'd', ['add', 'add2']]
+
 ls1.extend(["add", "add2"])
 print(ls1)
+# output ['a', 'b', 2, 'd', ['add', 'add2'], 'add', 'add2']
+
 ls2[1] = 100
 print(ls2)
+ls3 = list(set(ls3))
+print("ls3 =", ls3)
+# output ls3 = [1, 2, 3, 4]
 
 # tuples
 tp1 = (1, "a", 1.1, "b")  # tuples
