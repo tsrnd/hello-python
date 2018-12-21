@@ -8,3 +8,13 @@ def factorial(n):
     return s
 
 print(factorial(8))
+
+import unittest
+class TestFactorialMethod(unittest.TestCase):
+
+    def test_factorial(self):
+        self.assertEqual(factorial(0),1)
+
+if __name__ == '__main__':
+    unittest.main()
+
