@@ -5,7 +5,7 @@ except:
   print("Something went wrong when writing to the file")
 finally:
   f.close()
-
+w
 #   f = open("hello-python/text.txt", "r")
 # # print(f.read())
 # # print(f.read())
