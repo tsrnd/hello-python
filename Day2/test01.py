@@ -1,4 +1,4 @@
-# tính giai thừa của một số n
+import unittest
 
 def factorial(n):
     if n == 0: return 1
@@ -9,7 +9,6 @@ def factorial(n):
 
 print(factorial(8))
 
-import unittest
 class TestFactorialMethod(unittest.TestCase):
 
     def test_factorial(self):
@@ -17,4 +16,3 @@ class TestFactorialMethod(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
