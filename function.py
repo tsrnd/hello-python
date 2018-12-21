@@ -4,13 +4,20 @@ class Summation(object):
         self.contents = a + b
         print(self.contents)
 
-
-sumInstance = Summation()
-sumInstance.sum(1, 2)
-
 ##########
 
 
+class profile():
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def info(self):
+        print("Your name is: ", self.name)
+        print("Your age is: ", self.age)
+
+
+############
 def myfunc(sequence):
     arr = []
     for x in sequence:
@@ -22,8 +29,6 @@ def myfunc(sequence):
     print(arr)
     return
 
-
-myfunc("maitrabm")
 # output ['m', 'i', 't', 'r']
 
 #########
@@ -36,9 +41,6 @@ def Hello():
     else:
         print("Hello world")
     return
-
-
-Hello()
 
 
 #######
