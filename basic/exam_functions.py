@@ -5,6 +5,9 @@ def funcWithDefaultValue(national='Viet Nam'):
 
 # recursion Function
 def recursionFactorial(n):
+    if n==0:
+        raise Exception('Can not calculate factorial for 0.')
+
     if n == 1:
         return 1
     return n*recursionFactorial(n-1)
