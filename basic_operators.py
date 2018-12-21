@@ -1,9 +1,18 @@
+print('= Basic Operators =')
+
 # Arithmetic Operators
+
 # Comparison (Relational) Operators
+
 # Assignment Operators
+
 # Logical Operators
+
 # Bitwise Operators
+
 # Membership Operators
+print('# Membership Operators')
+
 num = 1
 seq1 = {'1': 1}
 seq2 = {1: '1'}
