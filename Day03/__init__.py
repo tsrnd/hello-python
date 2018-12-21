@@ -1,1 +1,0 @@
-from Info import  msg1, msg2
