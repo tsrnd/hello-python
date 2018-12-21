@@ -8,5 +8,3 @@ def factorial(n):
     return s
 
 print(factorial(8))
-
-
