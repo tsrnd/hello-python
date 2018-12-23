@@ -1,5 +1,5 @@
 import pytest, random
-from sorting import insertion_sort
+from sorting import insertion_sort, selection_sort
 
 total_test_case = 100
 min_number = -100000
@@ -18,10 +18,16 @@ def create_test_case():
 
 
 @pytest.mark.parametrize("input", create_test_case())
-
 # test insertion_sort
 def test_insertion_sort(input):
-    print(input)
-    case_copy = input.copy()
-    case_copy.sort()
-    assert case_copy == insertion_sort(input)
+    expect = input.copy()
+    expect.sort()
+    assert expect == insertion_sort(input)
+
+
+@pytest.mark.parametrize("input", create_test_case())
+# test selection_sort
+def test_selection_sort(input):
+    expect = input.copy()
+    expect.sort()
+    assert expect == selection_sort(input)

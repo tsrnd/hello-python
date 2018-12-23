@@ -11,6 +11,17 @@ def insertion_sort(array):
     return array
 
 
-# array = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-# insertion_sort(array)
-# print(array)
+def selection_sort(array):
+    for i in range(len(array)):
+        min_position = i
+
+        for j in range(i + 1, len(array)):
+            if array[min_position] > array[j]:
+                min_position = j
+
+        temp = array[i]
+        array[i] = array[min_position]
+        array[min_position] = temp
+
+    return array
+
