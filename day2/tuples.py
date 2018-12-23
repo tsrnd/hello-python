@@ -16,4 +16,3 @@ print('\n\n Start here \n')
 string = 'Vo Van Nghia 123 hi'
 string1 = list(string)
 print(string1)
-

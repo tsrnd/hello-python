@@ -11,10 +11,10 @@ print ("Opening mode : ", fo.mode)
 fo.close()
 print ("Closed or not : ", fo.closed)
 fo = open("foo.txt", "r+")
-str = fo.read(10);
+str = fo.read(10)
 print("Chuoi da doc la : ", str)
 
-position = fo.tell();
+position = fo.tell()
 print("Con tro file hien tai : ", position)
 
 obj=open("abcd.txt","w")

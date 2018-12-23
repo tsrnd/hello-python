@@ -9,10 +9,3 @@ if (x):
   print("YES! We have a match!")
 else:
   print("No match")
-
-
-#Replace all white-space characters with the digit "9":
-
-str = "The rain in 12 Spain"
-x = re.sub("\d", "#", str)
-print(x)

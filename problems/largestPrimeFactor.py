@@ -9,6 +9,3 @@ while b < a/2:
     else:
         b = b + 1
 print(int(a))
-
-    
-    

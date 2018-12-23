@@ -76,4 +76,3 @@ print(List)
 
 List.pop() # remove the last element
 print(List)
-

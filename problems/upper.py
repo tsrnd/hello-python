@@ -6,4 +6,3 @@ for i in range(len(string)):
         output += string[i].upper()
     else: output += string[i]
 print(output)
-

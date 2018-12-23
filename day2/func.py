@@ -47,7 +47,7 @@ print('x is still', x)
 
 # function global
 x = 50
-def func():
+def func2():
     global x
 
     print('x is', x)
@@ -55,7 +55,7 @@ def func():
     print('Changed global x to', x)
 
 
-func()
+func2()
 print('Value of x is', x)
 
 # function default
@@ -89,7 +89,7 @@ def maximum(x, y):
 print(maximum(2, 3))
 
 # function has docstring
-def print_max(x, y):
+def print_max2(x, y):
     '''Prints the maximum of two numbers.
     The two values must be integers.'''
     # convert to integers, if possible
@@ -101,6 +101,5 @@ def print_max(x, y):
     else:
         print(y, 'is maximum')
 
-print_max(3, 5)
+print_max2(3, 5)
 print(print_max.__doc__)
-

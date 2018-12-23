@@ -9,7 +9,3 @@ s.lower() s.upper()
 s.strip() # remove space from the start and end
 s.isalpha() s.isdigit() s.isspace()
 s.startswith() s.endswith()
-
-
-
-
