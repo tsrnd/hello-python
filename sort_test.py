@@ -1,6 +1,6 @@
 import unittest
 import random
-from sort_code import quicksort, insertionsort
+from sort_code import quicksort, mergesort
 
 
 def random_array(min_value, max_value, element_number):
@@ -20,4 +20,4 @@ class SortTest(unittest.TestCase):
     def testinsertionsort(self):
         for _ in range(self.case_number):
             case_test = random_array(-100000, 100000, 10000)
-            self.assertEqual(sorted(case_test), insertionsort(case_test))
+            self.assertEqual(sorted(case_test), mergesort(case_test))
