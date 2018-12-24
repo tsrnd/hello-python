@@ -8,11 +8,20 @@ def insertionSort(inputArray):
         inputArray[i] = a
     return inputArray
 
-def bubbleSort(inputArray):
-    for _ in range (0, len(inputArray)-2):
-        for j in range(len(inputArray) - 1, 0, -1):
-            if inputArray[j] < inputArray[j - 1]:
-                tmp = inputArray[j]
-                inputArray[j] = inputArray[j - 1]
-                inputArray[j - 1] = tmp
-    return inputArray
+def quickSort(array):
+    less = []
+    equal = []
+    greater = []
+
+    if len(array) > 1:
+        pivot = array[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            if x == pivot:
+                equal.append(x)
+            if x > pivot:
+                greater.append(x)
+        return quickSort(less)+equal+quickSort(greater)
+    else: 
+        return array
