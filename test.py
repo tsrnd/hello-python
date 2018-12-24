@@ -22,3 +22,6 @@ class Testing(unittest.TestCase):
             list_copy = list_sort.copy()
             list_copy.sort()
             self.assertEqual(list_copy, shellSort(list_sort))
+            
+if __name__ == '__main__':
+    unittest.main()
