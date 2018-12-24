@@ -32,6 +32,6 @@ def quickSort(arr,low,high):
       quickSort(arr, pi+1, high)
     return arr
 
-listRandom = Rand(-100000,100000,10000)
-t = quickSort(listRandom, 0,10000-1)
+listRandom = Rand(-100000,100000,10)
+t = quickSort(listRandom, 0,9)
 print(t)
