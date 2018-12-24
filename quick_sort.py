@@ -36,10 +36,10 @@ def quicksort(mylist, sIndex, eIndex):
         else:
             quicksort(mylist, sIndex, j)
             quicksort(mylist, i, eIndex)
-    # end else
 
-a = [3, 6, 9, 2, 6, 8, 9, 1, 7, 21, 7, 12]
+#a = [3, 6, 9, 2, 6, 8, 9, 1, 7, 21, 7, 12]
 
-quicksort(a, 0, len(a) - 1)
+#quicksort(a, 0, len(a) - 1)
 
-print("After sorting: ", a)
+#print("After sorting: ", a)
+# result is: 'After sorting:  [1, 2, 3, 6, 6, 7, 7, 8, 9, 9, 12, 21]'
