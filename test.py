@@ -1,6 +1,6 @@
 import unittest, random
-from shell_sort import shellSort
-from quick_sort import quickSort
+from shell_sort import shellSort,quickSort
+# from quick_sort import quickSort
 
 
 class Testing(unittest.TestCase):
