@@ -12,12 +12,14 @@ def quickSort(array):
     return lesser + pivots + greater
 
 
-def gnomeSort(array):
-    i = 0
-    while i < len(array):
-        if i == 0 or (array[i] >= array[i-1]):
-            i += 1
-        else:
-            array[i], array[i-1] = array[i-1], array[i]
-            i -= 1
-    return array
+def countingSort(array):
+    maxArray, minArray = max(array), min(array)
+    res = []
+    listIndex = [0] * (maxArray - minArray + 1)
+    for i in array:
+        listIndex[i + abs(minArray) - 1] += 1
+    for i in range(minArray, maxArray + 1):
+        while listIndex[i + abs(minArray) - 1]:
+            listIndex[i + abs(minArray) - 1] -= 1
+            res.append(i)
+    return res

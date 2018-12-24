@@ -1,6 +1,6 @@
 import random
 import unittest
-from sorting_algorithm import gnomeSort, quickSort
+from sorting_algorithm import countingSort, quickSort
 
 
 def randomArray():
@@ -14,8 +14,8 @@ class MyTestSort(unittest.TestCase):
             sorted_list = sorted(array)
             self.assertEqual(sorted_list, quickSort(array))
 
-    def testGnomeSort(self):
+    def testCountingSort(self):
         for _ in range(100):
             array = randomArray()
             sorted_list = sorted(array)
-            self.assertEqual(sorted_list, gnomeSort(array))
+            self.assertEqual(sorted_list, countingSort(array))
