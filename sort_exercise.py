@@ -1,12 +1,15 @@
 
-def selectSort(array):
-    for i in range(len(array)-1):
-        indexMin = i
-        for j in range(i+1, len(array)):
-            if array[j] < array[indexMin]:
-                indexMin = j
-        array[i], array[indexMin] = array[indexMin], array[i]
-    return array
+def countingSort(array):
+    maxArray, minArray = max(array), min(array)
+    arr = []
+    arrayIndex = [0] * (maxArray - minArray + 1)
+    for i in array:
+        arrayIndex[i + abs(minArray) - 1] += 1
+    for i in range(minArray, maxArray + 1):
+        while arrayIndex[i + abs(minArray) - 1]:
+            arrayIndex[i + abs(minArray) - 1] -= 1
+            arr.append(i)
+    return arr
 
 
 def quickSort(array):
