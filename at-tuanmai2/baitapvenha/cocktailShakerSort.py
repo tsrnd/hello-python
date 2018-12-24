@@ -20,17 +20,4 @@ def cocktailShakerSort(array):
         start += 1
     return array
 
-class TestSort(unittest.TestCase):
-    testcase = [[1,3,4,4,7,23,53,75,34,2,54,3,3,6,245],
-            [5,3,4,6,3,6,8,43,653,436,666,777,33,224,65],
-            [454,34,12,64,7,33],
-            [3]]
-    result =   [[1, 2, 3, 3, 3, 4, 4, 6, 7, 23, 34, 53, 54, 75, 245],
-                [3, 3, 4, 5, 6, 6, 8, 33, 43, 65, 224, 436, 653, 666, 777],
-                [7, 12, 33, 34, 64, 454],
-                [3]]
-    def test(self):
-        for i in range(0, len(self.testcase)):
-            self.assertEqual(cocktailShakerSort(self.testcase[i]), self.result[i])
-if __name__ == '__main__':
-    unittest.main()
+print(cocktailShakerSort([4,4,5,3,33,66,23,64,23,643534,23,66,4,662]))
