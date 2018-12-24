@@ -1,5 +1,5 @@
 import unittest, random
-from main import quickSort, shellSort
+from main import quickSort, shellSort, bubbleSort, insertionSort
 
 class Testing(unittest.TestCase):
     const_round = 100
@@ -22,3 +22,20 @@ class Testing(unittest.TestCase):
             case_copy = case.copy()
             case_copy.sort()
             self.assertEqual(case_copy, shellSort(case))
+
+    #test bubblesort with 100 list(10000)
+    def testBubbleSort(self):
+        for _ in range(self.const_round):
+            case = [random.randint(self.const_min_random, self.const_max_random) for _ in range(self.const_limit_case)]
+            case_copy = case.copy()
+            case_copy.sort()
+            self.assertEqual(case_copy, bubbleSort(case))
+
+    #test insertion  with 100 list(10000)
+    def testInsertionSort(self):
+        for _ in range(self.const_round):
+            case = [random.randint(self.const_min_random, self.const_max_random) for _ in range(self.const_limit_case)]
+            case_copy = case.copy()
+            case_copy.sort()
+            self.assertEqual(case_copy, insertionSort(case))
+
