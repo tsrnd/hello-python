@@ -5,7 +5,7 @@ class Testing(unittest.TestCase):
     const_round = 100
     const_min_random = -100000
     const_max_random = 100000
-    const_limit_case = 10000
+    const_limit_case = 100
 
     #test quicksort with 100 list(10000)
     def testQuickSort(self):
