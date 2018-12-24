@@ -13,9 +13,12 @@ print('= Basic Operators =')
 # Membership Operators
 print('# Membership Operators')
 
-num = 1
 seq1 = {'1': 1}
 seq2 = {1: '1'}
+num = 1
+print('seq1 =', seq1)
+print('seq2 =', seq2)
+print('num = ', num)
 if num in seq1:
   print('num is in seq1')
 else:
@@ -33,6 +36,9 @@ num is in seq2
 a = "hello"
 b = "hello"
 c = "python"
+print('a =', a)
+print('b =', b)
+print('c =', c)
 if a is b:
   print("a<%s> is b<%s>" % (id(a), id(b)))
 else:

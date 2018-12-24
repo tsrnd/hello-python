@@ -6,17 +6,17 @@ print('# Mathematical Functions')
 from math import trunc, floor, ceil
 
 num = 3.45
-print('num = %d' % num)
-print('trunc = %f' % trunc(num))
-print('round = %f' % round(num))
-print('floor = %f' % floor(num))
-print('ceil = %f' % ceil(num))
+print('num =', num)
+print('trunc =', trunc(num))
+print('round =', round(num))
+print('floor =', floor(num))
+print('ceil =', ceil(num))
 '''
-num = 3
-trunc = 3.000000
-round = 3.000000
-floor = 3.000000
-ceil = 4.000000
+num = 3.45
+trunc = 3
+round = 3
+floor = 3
+ceil = 4
 '''
 
 # Random Number Functions
@@ -24,20 +24,18 @@ print('# Random Number Functions')
 from random import choice, shuffle, uniform
 
 seq = ['red', 'blue', 'green', 'yellow']
-print('seq = ' + ', '.join(seq))
+print('seq =', seq)
 color = choice(seq)
-print('choice = ' + color)
+print('choice =', color)
 shuffle(seq)
-print('shuffle = ' + ', '.join(seq))
+print('shuffle =', seq)
 '''
-seq = red, blue, green, yellow
+seq = ['red', 'blue', 'green', 'yellow']
 choice = green
-shuffle = yellow, red, green, blue
+shuffle = ['green', 'red', 'blue', 'yellow']
 '''
 
-x = 3
-y = 7
-print('uniform(%d, %d) = %f' % (x, y, uniform(x, y)))
+print('uniform(3, 7) =', uniform(3, 7))
 '''
-uniform(3, 7) = 6.966907
+uniform(3, 7) = 5.076150395551634
 '''
