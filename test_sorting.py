@@ -1,22 +1,16 @@
-import Sorting as MySorting
-import unittest
-import pytest
+from Sorting import insertSort, bubleSort
 from random import randint
 
 
-def initListTest(bound=10000, rangeStart=-100000, rangeEnd=100000):
+def initListTest(bound=10_000, rangeStart=-100_000, rangeEnd=100_000):
     return [randint(rangeStart, rangeEnd) for _ in range(bound)]
 
 
-class TestOfSorting(unittest.TestCase):
-    def testMyInsertSort(seft):
-        listTest = initListTest()
-        seft.assertEqual(MySorting.insertSort(listTest), sorted(listTest))
-
-    def testMyInsertSort(seft):
-        listTest = initListTest()
-        seft.assertEqual(MySorting.bubleSort(listTest), sorted(listTest))
+def testMyInsertSort():
+    listTest = initListTest()
+    assert insertSort(listTest), sorted(listTest)
 
 
-if __name__ == "__main__":
-    unittest.main()
+def testMyBubleSort():
+    listTest = initListTest()
+    assert bubleSort(listTest), sorted(listTest)
