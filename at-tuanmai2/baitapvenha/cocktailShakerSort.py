@@ -19,5 +19,3 @@ def cocktailShakerSort(array):
                 array[j - 1] = tam
         start += 1
     return array
-
-print(cocktailShakerSort([4,4,5,3,33,66,23,64,23,643534,23,66,4,662]))
