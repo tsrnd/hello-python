@@ -16,12 +16,12 @@ class Testing(unittest.TestCase):
             list_copy.sort()
             self.assertEqual(list_copy, quickSort(list_sort))
 
-    # def testShellSort(self):
-    #     for _ in range(self.total_case):
-    #         list_sort = [random.randint(self.min_num, self.max_num) for _ in range(self.range_array)]
-    #         list_copy = list_sort.copy()
-    #         list_copy.sort()
-    #         self.assertEqual(list_copy, shellSort(list_sort))
+    def testShellSort(self):
+        for _ in range(self.total_case):
+            list_sort = [random.randint(self.min_num, self.max_num) for _ in range(self.range_array)]
+            list_copy = list_sort.copy()
+            list_copy.sort()
+            self.assertEqual(list_copy, shellSort(list_sort))
 
 if __name__ == '__main__':
     unittest.main()
