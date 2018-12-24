@@ -9,16 +9,19 @@ def selectSort(array):
     return array
 
 
-def oldEventSort(array):
-    sorted = False
-    while not sorted:
-        sorted = True
-        for i in range(1, len(array)-1, 2):
-            if array[i] > array[i+1]:
-                array[i], array[i+1] = array[i+1], array[i]
-                sorted = False
-        for i in range(0, len(array)-1, 2):
-            if array[i] > array[i+1]:
-                array[i], array[i+1] = array[i+1], array[i]
-                sorted = False
-    return array
+def quickSort(array):
+    less = []
+    equal = []
+    greater = []
+    if len(array) > 1:
+        pivot = array[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            if x == pivot:
+                equal.append(x)
+            if x > pivot:
+                greater.append(x)
+        return quickSort(less) + equal + quickSort(greater)
+    else:
+        return array
