@@ -41,9 +41,6 @@ def bubbleSort(arr):
                 temp = arr[i]
                 arr[i] = arr[i+1]
                 arr[i+1] = temp
-
-    arr = [54,26,93,17,77,31,44,55,20]
-    bubbleSort(arr)
     return arr
 
 ###insertion sort
