@@ -18,7 +18,7 @@ class TestOfSorting(unittest.TestCase):
         numOfTestCase = 100
         listTest = initListTest(numOfTestCase)
         for i in range(numOfTestCase):
-            print("Progress of testMyInsertSort: {} / {} %".format(i+1,numOfTestCase))
+            print("Progress of testMyInsertSort: {} / {} %".format(i+1, numOfTestCase))
             seft.assertEqual(MySorting.insertSort(
                 listTest[i]), sorted(listTest[i]))
 
@@ -26,7 +26,7 @@ class TestOfSorting(unittest.TestCase):
         numOfTestCase = 100
         listTest = initListTest(numOfTestCase)
         for i in range(numOfTestCase):
-            print("Progress of testMyBubbleSort: {} / {} %".format(i+1),numOfTestCase)
+            print("Progress of testMyBubbleSort: {} / {} %".format(i+1, numOfTestCase))
             seft.assertEqual(MySorting.bubleSort(
                 listTest[i]), sorted(listTest[i]))
 
