@@ -22,7 +22,7 @@ class testQuickSort(unittest.TestCase):
 class TestSelectionSort(unittest.TestCase):
     def test_selection_sort(self):
         for _ in range(100):
-            array = Rand(-100000, 10000, 10000)
+            array = Rand(-100000, 100000, 10000)
             arraysort = array[:]
             arraysort.sort()
             self.assertEqual(selectionSort(array,10000), arraysort)
