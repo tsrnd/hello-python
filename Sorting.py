@@ -1,22 +1,26 @@
 def insertSort(array):
     i = 1
     while i < len(array):
+        marker = array[i]
         j = i
-        while j > 0 and array[j-1] > array[j]:
-            array[j], array[j-1] = array[j-1], array[j]
+        while j > 0 and array[j-1] > marker:
+            array[j] = array[j-1]
             j = j-1
         i = i+1
+        array[j] = marker
     return array
 
 
 def bubleSort(array):
     i = 0
     isHasSwap = False
-    while i < len(array)-1 or isHasSwap == True:
-        if(i == len(array)-1):
+    n = len(array)-1
+    while i < n or isHasSwap == True:
+        if(i == n):
             i = 0
             isHasSwap = False
-        if(array[i+1] < array[i]):
+            n = n-1
+        elif(array[i+1] < array[i]):
             isHasSwap = True
             array[i], array[i+1] = array[i+1], array[i]
         else:
