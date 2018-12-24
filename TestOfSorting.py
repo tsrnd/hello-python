@@ -1,5 +1,5 @@
 import Sorting as MySorting
-import unittest
+import unittest,pytest
 from random import randint
 
 
@@ -15,3 +15,6 @@ class TestOfSorting(unittest.TestCase):
     def testMyInsertSort(seft):
         listTest = initListTest()
         seft.assertEqual(MySorting.bubleSort(listTest), sorted(listTest))
+
+if __name__ == "__main__":
+    unittest.main()
