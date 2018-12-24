@@ -9,11 +9,11 @@ class Testing(unittest.TestCase):
     total_number = 10000
 
     # def selectionSort(self):
-    #     for _ in range(self.max_test_case):
+    #     for _ in range(self.max_test_case): 
     #         case = [random.randint(self.min_range, self.max_range) for _ in range(self.total_number)]
-    #         self.assertEqual(sorted(case), selectionSort(case))
+    #         self.assertEqual((case), selectionSort(case))
 
-    def testBubleSort(self):
-        for _ in range(self.max_test_case):
+    def testMergeSort(self):
+         for _ in range(self.max_test_case):
             case = [random.randrange(self.min_range, self.max_range) for _ in range(self.total_number)]
-            self.assertEqual(sorted(case), bubleSort(case))
+            self.assertEqual(sorted(case), mergeSort(case))
