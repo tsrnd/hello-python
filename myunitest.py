@@ -2,6 +2,7 @@ import unittest
 import mymodule
 
 class MyUnitest(unittest.TestCase):
+
     def test_random_list(self):
         self.assertEqual(len(mymodule.randomList()),10000)
 
@@ -10,6 +11,13 @@ class MyUnitest(unittest.TestCase):
         list_sorted = list_not_sort.copy()
         list_not_sort.sort
         mymodule.budle_sort(list_sorted)
+        self.assertEqual(list_not_sort,list_not_sort)
+
+    def test_gnome_sort(self):
+        list_not_sort = mymodule.randomList()
+        list_sorted = list_not_sort.copy()
+        list_not_sort.sort
+        mymodule.gnome_sort(list_sorted)
         self.assertEqual(list_not_sort,list_not_sort)
 
 if __name__ == "__main__":

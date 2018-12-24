@@ -2,12 +2,22 @@ def budle_sort(rdList) :
     for i in range(len(rdList)-2):
         j = len(rdList) -1 
         while (j > i):
-            preIndex = j-1
-            if rdList[j] < rdList[preIndex]:
+            if rdList[j] < rdList[j-1]:
                 temp = rdList[j]
-                rdList[j]= rdList[j-1]
+                rdList[j] = rdList[j-1]
                 rdList[j-1] = temp
-            j = j-1
+            j -=1
+
+def gnome_sort(rdList) :
+    pos = 0
+    while pos < len(rdList):
+        if pos == 0 or rdList[pos] >= rdList[pos - 1]:
+            pos += 1
+        else :
+            temp = rdList[pos]
+            rdList[pos] = rdList[pos-1]
+            rdList[pos-1] = temp
+            pos -= 1
 
 import random
 def randomList():
