@@ -1,16 +1,3 @@
-import random
-
-def swap( x, y):
-    t = x
-    x = y
-    y = t
-
-def Rand(start, end, num): 
-    res = [] 
-    for j in range(num): 
-        res.append(random.randint(start, end)) 
-    return res 
-
 def partition(arr,low,high): 
     i = ( low-1 )        
     pivot = arr[high]     
@@ -32,6 +19,14 @@ def quickSort(arr,low,high):
       quickSort(arr, pi+1, high)
     return arr
 
-listRandom = Rand(-100000,100000,10)
-t = quickSort(listRandom, 0,9)
-print(t)
+def selectionSort(data, size):
+  for i in range(0, size-1):
+    m = i
+    for j in range(i+1, size):
+        if(data[j] < data[m]):
+          m = j
+    if(m!= i):
+      t = data[i]
+      data[i] = data[m]
+      data[m] = t
+  return data
