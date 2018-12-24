@@ -2,26 +2,27 @@ import unittest, random
 from quicksort import quickSort
 from selectionsort import selectionSort
   
-def randomList(n, begin, end):
-    l = []
-    for _ in range(n):
-        l.append(random.randint(begin, end + 1))
-    return l
+def Rand(start, end, num): 
+    res = [] 
+    for j in range(num): 
+        res.append(random.randint(start, end)) 
+    return res 
+
  
   
 class testQuickSort(unittest.TestCase):
-    def test_merge_sort(self):
+    def test_quick_sort(self):
         for _ in range(100):
-            array = randomList(10000, -100000, 10000)
+            array = Rand(10000, -100000, 10000)
             arraysort = array.copy()
             arraysort.sort()
             self.assertEqual(quickSort(array,0,10000-1), arraysort)
  
   
-class TestCountingSort(unittest.TestCase):
-    def test_counting_sort(self):
+class TestSelectionSort(unittest.TestCase):
+    def test_selection_sort(self):
         for _ in range(100):
-            array = randomList(10000, -100000, 100001)
+            array = Rand(10000, -100000, 10000)
             arraysort = array[:]
             arraysort.sort()
             self.assertEqual(selectionSort(array,10000), arraysort)
