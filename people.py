@@ -5,10 +5,18 @@ class People:
         self.name = name
         self.age = age
         People.id+=1
+
     def displayInfo(self):
         print("Name is : %s , age is : %i and id is : %i" %(self.name,self.age,self.id))
+
     def show(self):
         print("finish")
+
+    def getName(self):
+        return self.name
+
+    def getId(self):
+        return self.id
 
 people1 = People("Nhat",23)
 people1.displayInfo()
@@ -33,3 +41,5 @@ class Nhat(People):
 people3 = Nhat("Nhat",12)
 people3.displayInfo()
 people3.show()
+print(people3.getName())
+print(people3.getId())
