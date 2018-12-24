@@ -1,28 +1,27 @@
 import unittest, random
 from quicksort import quickSort
 from selectionsort import selectionSort
-
-class Testing(unittest.TestCase):
-    const_round = 100
-    const_min_random = -100000
-    const_max_random = 100000
-    const_limit_case = 10000
-
-    #test quicksort with 100 list(10000)
-    def testQuickSort(self):
-        for _ in range(self.const_round):
-          case = [random.randint(self.const_min_random, self.const_max_random) for _ in range(self.const_limit_case)]
-          case_copy = case.copy()
-          case_copy.sort()
-          self.assertEqual(case_copy, quickSort(case,0, self.const_limit_case-1))
-
-
-    def testSelectionSort(self):
-        for _ in range(self.const_round):
-          case = [random.randint(self.const_min_random, self.const_max_random) for _ in range(self.const_limit_case)]
-          case_copy = case.copy()
-          case_copy.sort()
-          self.assertEqual(case_copy, selectionSort(case, self.const_limit_case))
-
-            
-
+  
+def randomList(n, begin, end):
+    l = []
+    for _ in range(n):
+        l.append(random.randint(begin, end + 1))
+    return l
+ 
+  
+class testQuickSort(unittest.TestCase):
+    def test_merge_sort(self):
+        for _ in range(100):
+            array = randomList(10000, -100000, 10000)
+            arraysort = array.copy()
+            arraysort.sort()
+            self.assertEqual(quickSort(array,0,10000-1), arraysort)
+ 
+  
+class TestCountingSort(unittest.TestCase):
+    def test_counting_sort(self):
+        for _ in range(100):
+            array = randomList(10000, -100000, 100001)
+            arraysort = array[:]
+            arraysort.sort()
+            self.assertEqual(selectionSort(array,10000), arraysort)

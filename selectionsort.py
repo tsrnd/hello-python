@@ -18,5 +18,8 @@ def Rand(start, end, num):
     return res 
 
 
-
+listRandom = Rand(-100000,100000,20)
+print(listRandom)
+t = selectionSort(listRandom,20)
+print(t)
 
