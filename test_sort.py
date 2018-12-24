@@ -3,7 +3,6 @@ from sort import *
 
 
 class Testing(unittest.TestCase):
-    maxDiff = None
     max_test_case = 100
     min_range = -100000
     max_range = 100000
