@@ -18,7 +18,3 @@ def old_even_sort(list):
                 swap(list, i, i+1)
                 sorted = False
     return
-
-list = [1,3,4,5,2,21,66]
-old_even_sort(list)
-print (list)
