@@ -7,9 +7,9 @@ national = 'Viet Nam'
 print("i am %s from %s" %(name, national))
 #--------------
 for letter in 'Hello':
-  print(letter)
+    print(letter)
 
 for i in (1,2,3,4,5,6):
-  if i >= 3:
-    print(i)
+    if i >= 3:
+        print(i)
 #--------------
