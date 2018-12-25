@@ -1,4 +1,3 @@
-import random
 RUN = 32
 
 

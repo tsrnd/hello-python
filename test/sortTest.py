@@ -9,14 +9,26 @@ class testSort(unittest.TestCase):
         for _ in range(100):
             arr = [random.uniform(-100000, 100000) for _ in range(10)]
             n = len(arr)
-
             b = arr.copy()
+
+            # Sorting implement.
             b.sort()
-            self.assertEqual(b,  timsort.timSort(arr, n))
+            timsort.timSort(arr, n)
+
+            self.assertEqual(b, arr)
 
     def testIntroSort(self):
         for _ in range(100):
-            a = [random.uniform(-100000, 100000) for _ in range(10000)]
+            a = [random.uniform(-100000, 100000) for _ in range(10)]
             b = a.copy()
+
+            # Sorting implement.
             b.sort()
-            self.assertEqual(b,  introsort.introSort(a, 2))
+            introsort.introSort(a)
+
+            self.assertEqual(b,  a)
+
+
+# Simple way to test all of file.
+if __name__ == '__main__':
+    unittest.main()
