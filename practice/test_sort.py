@@ -2,17 +2,37 @@ import random
 import unittest
 
 
-def countingSort(array):
-    maxArray, minArray = max(array), min(array)
-    res = []
-    listIndex = [0] * (maxArray - minArray + 1)
-    for i in array:
-        listIndex[i + abs(minArray) - 1] += 1
-    for i in range(minArray, maxArray + 1):
-        while listIndex[i + abs(minArray) - 1]:
-            listIndex[i + abs(minArray) - 1] -= 1
-            res.append(i)
-    return res
+def mergeSort(arr):
+    if len(arr) >1: 
+        mid = len(arr)//2 
+        L = arr[:mid] 
+        R = arr[mid:]
+
+        mergeSort(L)
+        mergeSort(R)
+
+        i = j = k = 0
+
+        while i < len(L) and j < len(R): 
+            if L[i] < R[j]: 
+                arr[k] = L[i] 
+                i+=1
+            else: 
+                arr[k] = R[j] 
+                j+=1
+            k+=1
+
+        while i < len(L): 
+            arr[k] = L[i] 
+            i+=1
+            k+=1
+
+        while j < len(R): 
+            arr[k] = R[j] 
+            j+=1
+            k+=1
+
+    return arr
 
 
 def quickSort(array):
@@ -43,7 +63,7 @@ class TestSorting(unittest.TestCase):
 
     def testSort(self):
         for _ in range(self.number_of_cases):
-            cases = [random.randrange(self.min_range, self.max_range)
+            cases = [random.uniform(self.min_range, self.max_range)
                      for _ in range(self.count)]
             # assert quickSort(cases) == sorted(cases)
-            assert countingSort(cases) == sorted(cases)
+            assert mergeSort(cases) == sorted(cases)
