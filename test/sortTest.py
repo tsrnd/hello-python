@@ -27,8 +27,3 @@ class testSort(unittest.TestCase):
             introsort.introSort(a)
 
             self.assertEqual(b,  a)
-
-
-# Simple way to test all of file.
-if __name__ == '__main__':
-    unittest.main()
