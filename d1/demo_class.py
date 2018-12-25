@@ -38,19 +38,19 @@ class Character:
 # print(d.name)
 
 class Skill:
-    def __init__(self, name, action=None):
-        self.__name = name
+    def __init__(self, skname, action=None):
+        self.__skname = skname
         self.__action = action
     
     @property
-    def name(self):
-        return "Skill " + self.__name
+    def skname(self):
+        return "Skill " + self.__skname
 
-    @name.setter
-    def name(self, name):
-        if not isinstance(name, str):
+    @skname.setter
+    def skname(self, skname):
+        if not isinstance(skname, str):
             raise ValueError('Skill must be string')
-        self.__name = name
+        self.__skname = skname
 
     @property
     def action(self):
@@ -66,19 +66,4 @@ class Skill:
 class Yasuo(Character, Skill):
     def __init__(self, name, age=None, skillName=None):
         super().__init__(name, age)
-        Skill.__init__(self, name=skillName)
-
-    def setSkillName(self, skillName):
-        Skill.name = skillName
-
-    def getSkillName(self):
-        return Skill.name
-
-# champ = Yasuo('Dasua', skillName="Hasagi")
-# print(champ.getSkillName())
-# champ.name = "riot"
-# champ.setSkillName('loc gio')
-# print(champ.getSkillName(), champ.name)
-
-# p = Character('riot')
-# print(p.name)
+        Skill.__init__(self, skname=skillName)

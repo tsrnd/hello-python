@@ -44,7 +44,7 @@ class TestClassSkill:
     #test attr
     def testAttr(self):
         # test has attr in class skill
-        assert hasattr(dc.Skill, 'name')
+        assert hasattr(dc.Skill, 'skname')
         assert hasattr(dc.Skill, 'action')
     
     #test instance
@@ -57,8 +57,8 @@ class TestClassSkill:
 
     ])
     def testInstanceWithInit(self, test_input, expected):
-        instance = dc.Skill(name=test_input)
-        assert instance.name == expected
+        instance = dc.Skill(skname=test_input)
+        assert instance.skname == expected
 
     # test class method set
     @pytest.mark.parametrize("test_input,expected", [
@@ -66,9 +66,9 @@ class TestClassSkill:
         ('leftgame', 'Skill leftgame'),
     ])
     def testInstanceWithSet(self, test_input, expected):
-        instance = dc.Skill(name="default")
-        instance.name = test_input
-        assert instance.name == expected
+        instance = dc.Skill(skname="default")
+        instance.skname = test_input
+        assert instance.skname == expected
 
 class TestClassYasuo:
     #test attr
@@ -76,29 +76,16 @@ class TestClassYasuo:
         # test has attr in class Yasuo
         assert hasattr(dc.Yasuo, 'name')
         assert hasattr(dc.Yasuo, 'action')
-        assert hasattr(dc.Yasuo, 'setSkillName')
-        assert hasattr(dc.Yasuo, 'getSkillName')
-
-    # @pytest.mark.parametrize("test_input,expected", [
-    #     ('hasagi', 'Skill hasagi'),
-    #     ('leftgame', 'Skill leftgame'),
-
-    # ])
-    # def testInstanceWithInit(self, test_input, expected):
-    #     instance = dc.Yasuo(name=test_input)
-    #     assert instance.name == expected
+        assert hasattr(dc.Yasuo, 'skname')
 
     # test class method set
-    # @pytest.mark.parametrize("test_input,expected", [
-    #     ('hasagi', 'hasagi', 'Skill hasagi'),
-    #     ('leftgame', 'leftgame', 'Skill leftgame'),
-    # ])
-    # def testInstanceWithSet(self, test_input, character_expected, skill_expected):
-    #     instance = dc.Yasuo(name="default")
-    #     instance.name = test_input
-    #     instance.setSkillName(test_input)
-    #     assert instance.name == character_expected
-    #     assert instance.getSkillName() == skill_expected
-    
-    #test instance
-    # def testInstanceCharacter(self):
+    @pytest.mark.parametrize("test_input,expected", [
+        ('hasagi', ['hasagi', 'Skill hasagi']),
+        ('leftgame', ['leftgame', 'Skill leftgame']),
+    ])
+    def testInstanceWithSet(self, test_input, expected):
+        instance = dc.Yasuo(name="default")
+        instance.name = test_input
+        instance.skname = test_input
+        assert instance.name == expected[0]
+        assert instance.skname == expected[1]
