@@ -1,3 +1,7 @@
+import random
+import unittest
+
+
 def countingSort(array):
     maxArray, minArray = max(array), min(array)
     res = []
@@ -9,6 +13,7 @@ def countingSort(array):
             listIndex[i + abs(minArray) - 1] -= 1
             res.append(i)
     return res
+
 
 def quickSort(array):
     less = []
@@ -28,7 +33,6 @@ def quickSort(array):
     else:
         return array
 
-import unittest, random
 
 class TestSorting(unittest.TestCase):
     maxDiff = None
@@ -39,7 +43,7 @@ class TestSorting(unittest.TestCase):
 
     def testSort(self):
         for _ in range(self.number_of_cases):
-            cases = [random.randrange(self.min_range, self.max_range) for _ in range(self.count)]
+            cases = [random.randrange(self.min_range, self.max_range)
+                     for _ in range(self.count)]
             # assert quickSort(cases) == sorted(cases)
             assert countingSort(cases) == sorted(cases)
-
