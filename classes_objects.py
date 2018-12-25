@@ -1,4 +1,4 @@
-# creating Classes
+# creating Class
 class PartyAnimal:
     x = 0
     name = ''
