@@ -3,7 +3,7 @@ from datetime import datetime
 
 class Events:
 
-    def __init__(self, id, name, content, owner, fromdate, todate, isdelete, ispublic, location):
+    def __init__(self, id, name, content, owner, fromdate, todate, isdelete, ispublic, location, contact):
         self.event_id = id
         self.event_name = name
         self.event_content = content
@@ -13,6 +13,7 @@ class Events:
         self.isdelete = isdelete
         self.ispublic = ispublic
         self.event_location = location
+        self.event_contact = contact
         self.event_timecreate = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.event_lasttime_update = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.event_user_update = owner
@@ -27,6 +28,7 @@ class Events:
         print('Event has been deleted: ', self.isdelete)
         print('Event is public: ', self.ispublic)
         print('Event location: ', self.event_location)
+        print('Event contact info: ', self.event_contact)
         print('Event time create: ', self.event_timecreate)
         print('Event time update: ', self.event_lasttime_update)
         print('Update infor by: ', self.event_user_update)

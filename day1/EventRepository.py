@@ -1,3 +1,4 @@
+import Errors
 
 class EventRepository:
     def __init__(self):
@@ -9,6 +10,6 @@ class EventRepository:
         try:
             self.list.append(event)
             event.displayInfo()
-            return True
+            return Errors.Errors(None, 0)
         except:
-            return False
+            return Errors.Errors('Can not add event to DB.', 1)

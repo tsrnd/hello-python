@@ -14,8 +14,13 @@ def createEvent():
     startDate = datetime.combine(date(2018, 12, 25), time(16, 30))
     endDate = datetime.combine(date(2018, 12, 25), time(17, 30))
     roomName = "Son Tra meeting room."
-    event = Events.Events(eventId, eventTitle, eventContent, eventAuthor, startDate, endDate, False, False, roomName)
+    contact = 'info@asiantech.vn'
+    event = Events.Events(eventId, eventTitle, eventContent, eventAuthor, startDate, endDate, False, False, roomName, contact)
 
     userCase = EventUsercase.EventUsercase()
     result = userCase.addEvent(event)
-    print('Check add result :', result)
+
+    if result.statusCode == 0:
+        print('Add success')
+    else:
+        print('Error message :', result.message)
