@@ -1,13 +1,3 @@
-def insertionSort(inputArray):
-    for x in range (1, len(inputArray)):
-        a = inputArray[x]
-        i = x
-        while i > 0 and inputArray[i - 1] > a:
-            inputArray[i] = inputArray[i - 1]
-            i = i - 1
-        inputArray[i] = a
-    return inputArray
-
 def quickSort(array):
     less = []
     equal = []
@@ -25,3 +15,21 @@ def quickSort(array):
         return quickSort(less)+equal+quickSort(greater)
     else: 
         return array
+
+def shellSort(alist):
+    sublistcount = len(alist)//2
+    while sublistcount > 0:
+        for start_position in range(sublistcount):
+            for i in range(start_position+sublistcount,len(alist),sublistcount):
+
+                current_value = alist[i]
+                position = i
+
+                while position>=sublistcount and alist[position-sublistcount]>current_value:
+                    alist[position]=alist[position-sublistcount]
+                    position = position-sublistcount
+
+                alist[position]=current_value
+
+        sublistcount = sublistcount // 2
+    return alist
