@@ -1,37 +1,32 @@
-def merge(array):
-    l, m, h = 0, len(array) // 2, len(array)
-    l1, l2, i = l, m, l
-    res = [0]*h
-    while l1 < m and l2 < h:
-        if array[l1] <= array[l2]:
-            res[i] = array[l1]
-            l1 += 1
-        else:
-            res[i] = array[l2]
-            l2 += 1
-        i += 1
-    while l1 < m:
-        res[i] = array[l1]
-        i += 1
-        l1 += 1
-
-    while l2 < h:
-        res[i] = array[l2]
-        i += 1
-        l2 += 1
-
-    for i in range(l, h):
-        array[i] = res[i]
+def countingSort(array):
+    maxArray, minArray = max(array), min(array)
+    res = []
+    listIndex = [0] * (maxArray - minArray + 1)
+    for i in array:
+        listIndex[i + abs(minArray) - 1] += 1
+    for i in range(minArray, maxArray + 1):
+        while listIndex[i + abs(minArray) - 1]:
+            listIndex[i + abs(minArray) - 1] -= 1
+            res.append(i)
     return res
 
-def selectionSort(arr):
-    for i in range(len(arr)):  
-        minIndex = i    
-        for j in range(i+1, len(arr)): 
-            if arr[minIndex] > arr[j]: 
-                minIndex = j 
-                arr[i], arr[minIndex] = arr[minIndex], arr[i] 
-    return arr
+def quickSort(array):
+    less = []
+    equal = []
+    greater = []
+
+    if len(array) > 1:
+        pivot = array[0]
+        for x in array:
+            if x < pivot:
+                less.append(x)
+            if x == pivot:
+                equal.append(x)
+            if x > pivot:
+                greater.append(x)
+        return quickSort(less)+equal+quickSort(greater)
+    else:
+        return array
 
 import unittest, random
 
@@ -45,9 +40,6 @@ class TestSorting(unittest.TestCase):
     def testSort(self):
         for _ in range(self.number_of_cases):
             cases = [random.randrange(self.min_range, self.max_range) for _ in range(self.count)]
-            self.assertEqual(selectionSort(cases), sorted(cases))
-            self.assertEqual(merge(cases), sorted(cases))
+            # assert quickSort(cases) == sorted(cases)
+            assert countingSort(cases) == sorted(cases)
 
-if __name__ == '__main__':
-    unittest.main()
-    
