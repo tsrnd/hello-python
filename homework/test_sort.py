@@ -8,11 +8,13 @@ def randomInputArray():
     return array
 
 def test_quick_sort():
-    a = randomInputArray()
-    b = sorted(a)
-    assert (b == quickSort(a))
+    for _ in range(100):
+        array = randomInputArray()
+        sorted_list = sorted(array)
+        assert(sorted_list == quickSort(array))
 
-def test_bubble_sort():
-    a = randomInputArray()
-    b = sorted(a)
-    assert (b == bubbleSort(a))
+def test_shell_sort():
+    for _ in range(100):
+        array = randomInputArray()
+        sorted_list = sorted(array)
+        assert(sorted_list == shellSort(array))
