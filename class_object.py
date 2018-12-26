@@ -17,13 +17,13 @@ print(mytest.myfunc())  # output My age is 23 and my name is Tram
 # ex2 _init_ method
 class Info(object):
     def __init__(self, address, name, age):
-        self.add = address
+        self.address = address
         self.name = name
         self.age = age
 
     def display_info(self):
         return ("Your address is %s and your name is %s and your age is %d"
-                % (self.add, self.name, self.age))
+                % (self.address, self.name, self.age))
 
 
 your_info = Info("Quang Nam", "Trâm", 23)
