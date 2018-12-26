@@ -8,7 +8,7 @@ cursor = db.cursor()
 # Insert into Person
 
 sql = """INSERT INTO Person (ID, NAME, ADDRESS)
-        VALUES ('7', 'Thai', 'da nang');
+        VALUES ('8', 'Thai', 'da nang');
         """
 try:
     cursor.execute(sql)
