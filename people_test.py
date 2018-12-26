@@ -9,4 +9,3 @@ class PeopleTest(unittest.TestCase):
     def testGetId(self):
         people = People("nhat",23)
         assert people.getId() == 4
-
