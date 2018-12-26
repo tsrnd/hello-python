@@ -10,8 +10,8 @@ class Myclass():
         return ("My age is %d and my name %s" % (self.age, self.name))
 
 
-mytest = Myclass()
-print(mytest.myfunc())  # output My age is 23 and my name is Tram
+# mytest = Myclass()
+# print(mytest.myfunc())  # output My age is 23 and my name is Tram
 
 
 # ex2 _init_ method
@@ -26,8 +26,8 @@ class Info(object):
                 % (self.add, self.name, self.age))
 
 
-your_info = Info("Quang Nam", "Trâm", 23)
-print(your_info.display_info())
+# your_info = Info("Quang Nam", "Trâm", 23)
+# print(your_info.display_info())
 # output Your address is Quang Nam and your name is Trâm and your age is 23
 
 # Ex3
@@ -43,11 +43,11 @@ class Student(Info):
                 (self.name, self.age, self.year))
 
 
-student = Student("Dn", "Nguyen Van A", 12, "2014")
-print(student.get_detail())
+# student = Student("Dn", "Nguyen Van A", 12, "2014")
+# print(student.get_detail())
 # output Your name is Nguyen Van A and 12 years old and is in 2014 year
-student.name = "Pham Thi Mai Trâm"
-print(student.get_detail())
+# student.name = "Pham Thi Mai Trâm"
+# print(student.get_detail())
 # output Your name is Pham Thi Mai Trâm and 12 years old and is in 2014 year
 
 
@@ -57,9 +57,9 @@ class Multiple(Myclass, Info):
         Info.__init__(self, add, name, age)
 
 
-a = Multiple("QN", "Tr", 23)
-print(a.myfunc())
-print(a.display_info())
+# a = Multiple("QN", "Tr", 23)
+# print(a.myfunc())
+# print(a.display_info())
 
 # My age is 23 and my name Tr
 # Your address is QN and your name is Tr and your age is 23
